@@ -1,13 +1,17 @@
 # Changelog
 
+## 5.2
+- Updated to snips 0.62.3
+- Add snips-injection
+
 ## 5.1
 - Updated to snips 0.60.8
 - Containers built from base images
 
-## 5
+## 5.0
 - Updated to snips 0.60.1
 
-## 4
+## 4.0
 - Use new Hass.io Services API and cleanup config
 
 ## 3.3

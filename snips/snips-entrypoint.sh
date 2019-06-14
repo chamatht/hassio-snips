@@ -16,7 +16,8 @@ fi
 
 SUPERVISORD_CONF_FILE="/etc/supervisor/conf.d/supervisord.conf"
 ASR_TYPE=$(jq --raw-output '.asr.type' $ASSISTANT_FILE)
-ANALYTICS_ENABLED=$(jq --raw-output '.analyticsEnabled' $ASSISTANT_FILE)
+# ANALYTICS_ENABLED=$(jq --raw-output '.analyticsEnabled' $ASSISTANT_FILE)
+ANALYTICS_ENABLED="false"
 SNIPS_MOSQUITTO_FLAG="-h localhost -p 1883"
 
 
@@ -73,7 +74,7 @@ fi
 
 # Read "global" arguments
 USE_INTERNAL_MQTT=true
-ALL_SNIPS_COMPONENTS=("snips-asr-google" "snips-asr" "snips-audio-server" "snips-tts" "snips-hotword" "snips-nlu" "snips-dialogue" "snips-analytics" "snips-debug")
+ALL_SNIPS_COMPONENTS=("snips-asr-google" "snips-asr" "snips-injection" "snips-audio-server" "snips-tts" "snips-hotword" "snips-nlu" "snips-dialogue" "snips-analytics" "snips-debug")
 declare -A SNIPS_COMPONENTS
 for c in "${ALL_SNIPS_COMPONENTS[@]}"
 do

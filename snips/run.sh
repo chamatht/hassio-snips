@@ -90,10 +90,13 @@ else
     fi
 fi
 
+cat /etc/snips.toml
+
 echo "[INFO] Starting snips-watch"
 ( sleep 2; /usr/bin/snips-watch -vvv --no_color ) &
 
 /usr/bin/snips-asr --version
+/usr/bin/snips-injection --version
 /usr/bin/snips-audio-server --version
 /usr/bin/snips-dialogue --version
 /usr/bin/snips-hotword --version
