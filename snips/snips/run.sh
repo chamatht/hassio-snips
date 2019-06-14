@@ -90,6 +90,8 @@ else
     fi
 fi
 
+cat /etc/snips.toml
+
 echo "[INFO] Starting snips-watch"
 ( sleep 2; /usr/bin/snips-watch -vvv --no_color ) &
 
